@@ -15,9 +15,10 @@ ASD is a developmental disorder that affects communication and behaviour. There 
 
 The data of the composition of the human gut microbiome of the children with Autistic Spectrum Disorder (ASD) was provided by Alexey Kotlik on www.kaggle.com which was the dataset from a research paper called "Altered gut microbial profile is associated with abnormal metabolism activity of Autism Spectrum Disorder" by Dan et al. The dataset is about the microbial genus and species that are present in the gut of Typically developing individuals (columns with AXX, where XX is a subject's ID number in the group) and ASD individuals (columns with BXX, where XX is a subject's ID number in the group)which were recruited in May 2016 to August 2017. The purpose of the dataset was for learning as well as transparency/accountability.  
 
+
 ## Team Members
 
-- Tara Obma: I don't know what I'm doing for most of the time but that's okay.
+- Tara Obma: I don't know what I'm doing for most of the time but it's okay.
 
 
 ## References
