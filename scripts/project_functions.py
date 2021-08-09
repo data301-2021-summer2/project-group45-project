@@ -11,10 +11,11 @@ def load_and_process(path):
     def TD_ASD(row):
         row['TD_ASDdiff'] = int(row['TDmean']) - int(row['ASDmean'])
         return row
-
-# df = (
-#     pd.read_csv("../../data/raw/GSE113690_Autism_16S_rRNA_OTU_assignment_and_abundance.csv")
-#     )
+    
+    def Positive(rs):
+        rs['Positive']=int(rs['TD_ASDdiff'] > 0)
+        return rs
+     
 
     df = (
         pd.read_csv("/Users/nitchakan/Desktop/DATA301/project-group45-project/data/raw/GSE113690_Autism_16S_rRNA_OTU_assignment_and_abundance.csv")
@@ -48,6 +49,8 @@ def load_and_process(path):
         .join(df['taxonomy'].str.split(';',8, expand=True).rename(columns={0:'Domain', 1:'Kingdom', 2:'Phylum', 
                                                                            3:'Class', 4:'Order', 5:'Family', 6:'Genus', 
                                                                            7:'Species'}))
-
+        .apply(lambda x: Positive(x), axis='columns')
+        
         )
+  
     return df1
